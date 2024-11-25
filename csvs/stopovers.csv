@@ -1,0 +1,262 @@
+﻿ID,MAIN PLACES,PLACE (old),REGION,PART OF,TYPE OF ANCHORAGE,PLACE COORDINATES DMS,PLACE COORDINATES DD,ARRIVAL DAY,DEPARTURE DAY,STOPOVER DURATION (days),REFERENCES (Italian edition),ORIGINAL MAP,REFERENCES (English edition),QUOTATIONS,RESOURCES,RESOURCES LINKS,latitude,logitude
+1,POLA,Pola,Istria,Austrian Empire,Arsenal,"44°52'04.7""N 13°50'16.8""E","44.868169871974935, 13.838064369748862",N.A.,15/03/1857,N.A.,"I, 6-11",,"I, 1-8","""The frigate Novara was laid up in the arsenal of Pola, where all requisite steps were taken to complete 
+her outfit, and prepare her thoroughly for the voyage."" [I, 5]",Uljanik Brodograd 1856 o.o.,https://www.uljanik.hr/en/,44.86816987,13.83806437
+2,MUGGIA,Muggia,Istria,Austrian Empire,Bay,45°36′30.348″N 13°45′52.287″E,"45.60843011052481, 13.764524243330953",17/03/1857,30/04/1857,44,"I, 11-13",https://archiviodistatotrieste.it/doc-mos/mappa-della-rada-di-trieste-e-della-baia-di-muggia-con-navi-affondate/,"I, 8-10","""After the frigate had been properly fitted up in the arsenal of Pola, she sailed 
+on the 15th March, 1857, for Trieste, where she cast anchor on the 17th in the Bay of Muggia. [...]
+The departure of the frigate was fixed for the 30th April, 1857,  [...]"" [I, 8, 11]",,,45.60843011,13.76452424
+3,TRIEST,Trieste,,Austrian Empire,Port,"45°38'49.9""N 13°44'32.8""E","45.647187, 13.742453",30/04/1857,30/04/1857,0,"I, 14",https://archiviodistatotrieste.it/doc-mos/mappa-della-rada-di-trieste-e-della-baia-di-muggia-con-navi-affondate/,"I, 12","""At 8 o'clock A.M. we weighed anchor, and the steamer Sta. Lucia approached the Novara 
+for the purpose of towing her from the Bay of Muggia into the roads of Trieste. 
+She had all her colours displayed, and saluted the city of Trieste, Austria's chief and 
+most important emporium, with 21 guns. The salute was answered from the castle, 
+whilst the hand on board struck up Haydn's heautiful hymn: "" God preserve the Emperor!"""" [I, 12]",,,45.647187,13.742453
+4,GIBRALTAR,Gibraltar,,British Empire,Harbour,"36°08'05.5""N 5°22'19.6""W","36.134852, -5.372100",21/05/1857,30/05/1857,9,"I, 26-42","https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~336164~90103948:1B--The-Strait-of-Gibraltar?sort=pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no&qvq=w4s:/where%2FGibraltar%2C%2BStrait%2Bof;q:Gibraltar;sort:pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no;lc:RUMSEY~8~1&mi=2&trs=27 
+
+https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~336167~90103951:2A--No-1--Gibraltar-Bay--No-2--Mala?sort=pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no&qvq=q:malaga;sort:pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no;lc:RUMSEY~8~1&mi=1&trs=16 ","I, 27-40","""On the morning of the 21st, the ship lay in a calm before the rock of Gibraltar. [...]
+A light breeze sprang up, and at half-past 3 P.M. the anchorage, eleven and a half fathoms in depth,
+was reached. The frigate now lay in front of the Alameda or public gardens of Gibraltar, situated 
+near the town gate, called the Ragged Staff."" [I, 27]","""Ragged Staff Gates"" in Wikipedia",https://en.wikipedia.org/wiki/Ragged_Staff_Gates,36.134852,-5.3721
+5,FUENGIROLA (SPAIN),Bay of Frangerola,Málaga,Spanish Monarchy,Bay,"36°33'04.5""N 4°36'05.8""W","36.55143961197028, -4.6016164644181385",01/06/1857,02/06/1857,1,,"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~360207~90127338:Plan-Du-Mouillage-De-Tarifa--with--?sort=pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no&qvq=q:Frangerola;sort:pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no;lc:RUMSEY~8~1&mi=0&trs=2 
+
+https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~360275~90127384:Plano-del-fondeadero-de-Frangerola-?sort=pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no&qvq=q:Frangerola;sort:pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no;lc:RUMSEY~8~1&mi=1&trs=2 ","I, 46-50","""When at last all hope of making the West had disappeared, we anchored, like many others of our 
+companions in sorrow, on the 1st June, at 6 P.M., in the Bay of Frangerola, fifteen miles north of Malaga.""
+[I, 46]"," Á. I. Aguilar Cuesta et alia, Fuengirola a través del Catastro de Ensenada, 
+Editorial La Serranía, Andalucía, 2019",https://www.researchgate.net/publication/337891808_Fuengirola_a_traves_del_Catastro_de_Ensenada ,36.55143961,-4.601616464
+6,MADEIRA,Funchal,Madeira,Portugal,Roadstead,"32°38'25.9""N 16°54'24.5""W","32.640536, -16.906806",08/06/1857,17/06/1857,9,"I, 48-87",https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~359551~90126352:Physical-Map-of-the-Island-of-Madei?qvq=q:pub_list_no%3D%2215940.000%22;lc:RUMSEY~8~1&mi=1&trs=2,"I, 57-107","""[...] we cast anchor together, in the roads of Funchal, in 32 fathoms, sandy bottom, 
+immediately South of the Loo Rock, a singular-looking, lofty, conical rock, which marks the best 
+anchorage for large ships. [...] The anchorage, of Funchal* is merely an open, exceedingly unsafe 
+roadstead, which affords so little protection to ships that often in southerly winds they are obliged to get 
+under sail. This is especially the case in the winter, when the sea often rushes into the small unprotected
+bay with fearful violence. In order to run less risk of being surprised by such gales, sailing vessels 
+generally cast anchor to the south of the Loo Rock, where there is tolerably safe anchorage at a depth of 
+twenty-five to thirty fathoms. In that position they are clear of the rocky headlands, and can therefore 
+more easily set sail before the sea rushes in with all its irresistible violence. Steamers, which are better
+able to resist the force of the waves than sailing vessels, generally cast anchor nearer the shore, so that
+passengers may be more easily landed, and coals shipped with greater facility. (*The Portuguese for 
+fennel-field, because the first discoverers of the island found this plant in great abundance).""
+[I, 57, 59-60]",,,32.640536,-16.906806
+7,RIO DE JANEIRO,Rio de Janeiro,Brazil,,Harbour,"22°54'07.5""S 43°10'19.2""W","-22.901832369183694, -43.171634853193474",05/08/1857,31/08/1857,26,"I, 100-136","https://www.biodiversitylibrary.org/page/49403870#page/91/mode/1up
+
+https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~309517~90079408?qvq=q%3Ario%20de%20janeiro%3Bsort%3Apub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no%3Blc%3ARUMSEY~8~1&mi=24&trs=393","I, 118-180","""[...] on the morning of the 5th, the numerous small islands situated in front of the harbour of Rio.
+The Sugar Loaf, that remarkable black basaltic rock at its entrance, stood grandly forth, as we ran in.
+Unfortunately the gloomy state of the atmosphere prevented the enjoyment 
+of the exquisite beauty of this so often described charming bay. [...] When the traveller, stepping on 
+shore from the anchorage for ships of war, (which is a little to the south of that for merchant vessels), 
+has forced his way through the swarms of human beings at the landing stage, and in front of the hotel 
+Pharoux, he finds himself on the Largo do Paco, or Palace Square. Here on his left rises the 
+singular-looking Imperial Residence, and on his right, close to the shore* the Market Hall"" [I, 118, 123]",,,-22.90183237,-43.17163485
+8,CAPE COLONY,Simon's Bay,South Africa,British Empire,Bay,"34°10'48.7""S 18°26'37.5""E","-34.180191, 18.443754",02/10/1857,26/10/1857,24,"I, 145-185",https://nla.gov.au/nla.obj-368781110/view?partId=nla.obj-373117727#page/n18/mode/1up,"I, 195-259","""On the 2nd of October, at 7 A.M., the anchor was let go in Simon's Bay, a spacious 
+but gloomy-looking sheet of water. Here ships ride much more secure than in Table Bay, [...]. 
+From Simon's Bay to Table Bay, round the Cape the distance is forty miles, whilst by land 
+the journey to the capital of the colony is, with good horses, performed in three hours."" [I, 195]",,,-34.180191,18.443754
+9,ST. PAUL ISLAND,St. Paul Island,Indian Ocean,,Mooring,"38°42'39.6""S 77°33'04.1""E","-38.710986, 77.551141",19/11/1857,08/12/1857,19,"I, 188-218","https://www.biodiversitylibrary.org/item/194579#page/189/mode/1up
+
+https://www.biodiversitylibrary.org/page/49408995#page/317/mode/1up 
+
+https://www.biblioest.it/SebinaOpac/resource/indischer-ocean-insel-st-paul/TSA02332174 ","I, 264-335","""On the 19th November, at daybreak, we found ourselves close in with St. Paul's Island, 
+while on our port-side the outline of New Amsterdam was visible in the shape of two lofty peaks 
+on the horizon. As the wind blew from the N.W., we kept the ship's course past 
+the north promontory of the island, and ranged along the eastern side to the selected anchoring
+ground. As we doubled the northernmost point, the conical-shaped Nine-Pin Rock came into view, 
+while the high and precipitous margin of the island in the N.E. with the entrance
+into the crater became visible."" [I, 264-265]",,,-38.710986,77.551141
+10,CEYLON,"Point de Galle
+(Colombo)",Ceylon,British Empire,"Harbour, Roadstead","6°01'50.6""N 80°13'12.7""E","6.030708, 80.220180",08/01/1857,16/01/1857,8,"I, 230-272","https://www.atlasofmutualheritage.nl/en/page/3094/map-of-gale 
+
+https://nla.gov.au/nla.obj-368781110/view?partId=nla.obj-373087069#page/n33/mode/1up 
+
+https://nla.gov.au/nla.obj-368781110/view?partId=nla.obj-373087195#page/n34/mode/1up","I, 343-418","""On the 8th January, we anchored in the unpicturesque haven of Point de Galle, 
+surrounded by groves of cocoa-nut palms, directly opposite the lighthouse tower, and 
+in a fine quartz sand bottom of 16^ fathoms (103 feet English). All large ships, that only intend
+remaining a short time, anchor in the open roadstead, the entrance into the inner harbour 
+being rather difficult, owing to numerous coral reefs. [...] On the 10th we hauled the frigate 
+into the small inner harbour, in order to facilitate the shipping of stores. The entrance is rather
+winding, owing to the numerous shoals, and it is with some little difficulty that one can find 
+a comfortable, commodious berth among such a crowd of shipping."" [I, 343-344]",,,6.030708,80.22018
+11,MADRAS,Madras,India,British Empire,Roadstead,"13°06'02.0""N 80°19'08.2""E","13.100563, 80.318943",30/01/1857,10/02/1857,11,"I, 274-306",https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~238116~5511377:Calcutta--Kolkata---Madras--Chennai?qvq=q:chennai;lc:RUMSEY~8~1&mi=3&trs=4,"I, 422-480","""On the 30th January, at 7.30 P.M., we anchored in Madras Roads, so dreaded for their insecurity,
+about three nautical miles from the shore, and in 9 fathoms (56 feet English). Even in the calmest
+weather there is a tremendous surf on this coast, and from October to December, in which strong gales
+blow from the N.E., it is all but unapproachable. For this reason, so soon as the wind increases so 
+as to endanger the ships in the roads, a flag is hoisted on a staff at the Master Attendant's office, 
+that they may put to sea at once. On the second signal, all ships must quit the Roads for fear 
+of being dashed through the surf upon the beach."" [I, 422]",,,13.100563,80.318943
+12,NICOBAR ISLANDS,Car Nicobar (1),Nicobar Islands,,"Mooring, Bay","9°14'08.0""N 92°44'46.0""E","9.235556, 92.746111",23/02/1858,27/02/1858,4,"I, 306-307
+II, 1-22","https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2210279
+
+https://www.biodiversitylibrary.org/page/49404090
+
+https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2210282 
+
+https://www.biblioest.it/SebinaOpac/resource/indischer-ocean-nicobaren-bucht-von-saoui-auf-garnicobar/TSA02332231","I, 481-482
+II, 1-38","""The following morning, Tuesday 23rd February, 1858, we anchored off the N.W. side of the island, 
+in 14 1/2 fathoms coral sand, about 2 miles distant from the shore, and just between 
+the two villages of Mosse and Saui, each consisting of a few huts."" [I, 481]
+""On 25th February, at 10 A.M., the naturalists, accompanied by the officers in charge 
+of the scientific apparatus, and the midshipmen, after very considerable difficulty, succeeded 
+in effecting a landing on the island of Kar-Nicobar, in a bay protected by a coral reef 
+(by observation 9° 14' 8"" N., and 92° 44' 46"" E.), between the villages of Moose and Saoui."" [II, 16]",,,9.235556,92.746111
+13,NICOBAR ISLANDS,Car Nicobar (2),Nicobar Islands,,"Mooring, Bay","9°07'26.9""N 92°46'08.8""E","9.124130, 92.769105",28/02/1858,28/02/1858,0,"II, 22-25",https://www.biblioest.it/SebinaOpac/resource/indischer-ocean-nicobaren-komios-arrow-bucht-auf-carnicobar/TSA02332374,"II, 38-42","""On 27th February, towards evening, after a stay of seven days on the north side of Kar-Nicobar, 
+which had been spent in scientific operations of the most varied nature, we again set sail, and 
+next morning cast anchor on the south side of the same island, close to the village of Komios. [...]
+As we were making for the land in what is called Komios Bay, near the village of the same name
+ (situate according to our observations in 9° 37' 32"" N. Lat. and 92° 43' 42"" E. Long.), [...]."" [II, 38-39]",,,9.12413,92.769105
+14,NICOBAR ISLANDS,Tillangchong,Nicobar Islands,,"Mooring, Bay","8°32'07.2""N 93°36'45.3""E","8.535320, 93.612570",05/03/1858,05/03/1858,0,"II, 26-27","https://www.biblioest.it/SebinaOpac/resource/indischer-ocean-nicobaren-insel-tillangschong/TSA02332472
+
+https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2210301","II, 43-45","""At the spot at which we landed (named by us Morrock's Cove, and according to observation 
+in 8° 32' 30"" N. and 93° 34' 10"" E.) the island was almost exclusively clothed 
+with trees and brushwood."" [II, 44]",,,8.53532,93.61257
+15,NICOBAR ISLANDS,Nancowry,Nicobar Islands,,"Mooring, Harbour","7°59'56.8""N 93°31'06.5""E","7.999108, 93.518480",06/03/1858,11/03/1858,5,"II, 29-35","https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2210311 
+
+https://www.biodiversitylibrary.org/item/194579#page/326/mode/1up 
+
+https://www.biblioest.it/SebinaOpac/resource/indischer-ocean-nicobaren-nangcovri-hafen/TSA02332475 ","II, 49-61","""[...] so that by sundown we were enabled to anchor in good holding ground, 
+opposite the village of Itoe, in the island of Nang- kauri."" [II, 49]",,,7.999108,93.51848
+16,NICOBAR ISLANDS,Trek,Nicobar Islands,,Mooring,"7°28'46.5""N 93°38'28.8""E","7.479576, 93.641334",17/03/1858,17/03/1858,0,"II, 36",https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2210279,"II, 63","""[...] so completely checked our progress that the anchor had to be let go. This procured us 
+the very unexpected pleasure of visiting these two small wooded islands [Treis and Trek] islands."" [II, 63]",,,7.479576,93.641334
+17,NICOBAR ISLANDS,Pulomilo,Nicobar Islands,,"Mooring, Harbour","7°24'35.9""N 93°41'56.3""E","7.409981, 93.698959",17/03/1858,18/03/1858,1,"II, 36-40",https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2210279,"II, 63-68","""The same afternoon, with the turn of the tide the current set in our favour, and towards 10 p.m. 
+we reached the roadstead protected to the eastward by the northernmost point of Little Nicobar, 
+to the westward by the island of Pulo Milu, and southward by the main-land of Little Nicobar itself."" 
+[II, 63]",,,7.409981,93.698959
+18,NICOBAR ISLANDS,St. George's Channel,Indian Ocean,,Mooring,"7°11'42.7""N 93°43'27.3""E","7.195185, 93.724235",19/03/1858,23/03/1858,4,"II, 40-44","https://www.biodiversitylibrary.org/page/49404110 
+
+https://www.biblioest.it/SebinaOpac/resource/indischer-ocean-nicobaren-st-georgs-canal/TSA02361665
+
+https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2210320 ","II, 68-75","""On the morning of 19th March, we were abreast of the island of Montialin St George's Channel, 
+and by evening had anchored on the northern side of Great Nicobar, S. E. of the island of Kondul,
+ which also lies in the Channel."" [II, 68]",,,7.195185,93.724235
+19,NICOBAR ISLANDS,Great Nicobar,Nicobar Islands,,Bay,"6°48'44.7""N 93°51'43.3""E","6.812411, 93.862021",24/03/1858,26/03/1858,2,"II, 68-79",https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2210279,"II, 76-131","""We now lay a course for the southern bay of Great Nicobar, where, shortly after 9 P.M. 
+of the 24th March, we cast anchor near the little stream called ""Galatea"" by the Danish expedition."" [II, 76]",,,6.812411,93.862021
+20,SINGAPORE,Singapore,Malaysia,,Roadstead,"1°15'05.3""N 103°47'51.1""E","1.251483, 103.797526",15/04/1858,21/04/1858,6,"II, 81-103","https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2210372 
+
+https://www.biodiversitylibrary.org/page/49404110#page/350/mode/1up
+
+https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2210408","II, 135-174","""Equally fortunate as in the straits was our passage through the labyrinth of islands, through which 
+a vessel must wind in order to reach Singapore. And this roadstead itself, what a contrast it presented 
+to the lovely beach of the Nicobar Islands!"" [II, 135]",,,1.251483,103.797526
+21,BATAVIA,Batavia,Indonesia,Dutch colonial Empire,Roadstead,"6°05'29.5""S 106°47'50.6""E","-6.091518, 106.797396",05/05/1858,29/05/1858,24,"II, 105-161","https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2210408
+
+https://www.biodiversitylibrary.org/item/194567#page/14/mode/1up
+
+https://www.atlasofmutualheritage.nl/en/page/2488/map-of-java 
+
+https://www.atlasofmutualheritage.nl/en/page/3743/map-showing-fortifications-of-batavia","II, 178-278","""At last, on the afternoon of May 5, we anchored in the roads of Batavia, in 6§- fathoms, mud bottom.""
+[II, 178]",,,-6.091518,106.797396
+22,MANILA,Cavite,Philippines,Spanish Monarchy,Harbour,"14°28'21.5""N 120°54'49.9""E","14.472642, 120.913857",18/06/1858,25/06/1858,7,"II, 162-200","https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2210478
+
+https://www.biodiversitylibrary.org/item/194567#page/87/mode/1up","II, 279-351","""We anchored on the afternoon of 18th June in the harbour of Cavite 
+(seven nautical miles south of Manila), because during the S.W. monsoon this harbour is more sheltered, 
+and therefore safer for ships, than the shallow open roadstead of the capital. Cavite, which boasts 
+a fort, an arsenal, a dockyard, and a cigar manufactory, of land projecting into the bay."" [II, 279-280]",,,14.472642,120.913857
+23,HONG KONG,Hong Kong,,British Empire,Port,"22°17'29.321""N 114°10'17.766""E","22.2914780303757, 114.17160171013124",05/07/1858,18/07/1858,13,"II, 202-239","https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2210533 
+
+https://www.biodiversitylibrary.org/item/194567#page/113/mode/1up 
+
+https://www.biodiversitylibrary.org/item/194567#page/116/mode/1up 
+
+https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2210581 
+
+https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~292737~90063980:Canton-and-its-approches,-Macao-and?qvq=w4s:/where%2FChina%2Fwhen%2F1856;q:Hong%20Kong;lc:RUMSEY~8~1&mi=1&trs=3   ","II, 353-408","""As the night was dark, with neither moonlight nor lighthouse [...], we could not venture to wind 
+our way through the narrow channel into the harbour of Hong-kong, on the north side of the island, 
+and we anchored therefore about 9 P.M. on the west side, in the Lemmas Channel; 
+and with the first beams of the sun and with the first beams of the sun, on the morning of the 5th July, 
+we stood in to the enchanting harbour of Hong-kong. [...] as we doubled Green Island, 
+the city of Victoria, rising amphitheatre-like; At 10A.M. we cast anchor directly opposite the town; 
+and amid the flags of England, America, France, Holland, and Russia, there now flaunted proudly 
+forth the flag of Austria!"" [II, 353, 354]",,,22.29147803,114.1716017
+24,SHANGHAI,Wusung River,Shanghai,Chinese Empire,Mooring,31° 23' 29.923''N 121° 30' 39.457''E,"31.39164521003513, 121.51096031017767",26/07/1858,28/07/1858,2,"II, 238-239","https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2210581 
+
+https://www.biodiversitylibrary.org/item/194567#page/134/mode/1up
+
+https://www.virtualshanghai.net/Maps/Collection?ID=799","II, 410-413","""With favourable wind and weather, the Novara cleared without accident the 47 miles 
+between the bar and the place where the Wusung falls into the Yang-tse-Kiang, 
+and on the evening of the 26th July dropped anchor in front of Wusung."" [II, 410]",,,31.39164521,121.5109603
+25,SHANGHAI,Shanghai,,Chinese Empire,Harbour,"31°14'00.8""N 121°29'26.5""E","31.233545, 121.490697",29/07/1858,11/08/1858,13,"II, 240-307","https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2210581 
+
+https://www.biodiversitylibrary.org/item/194567#page/135/mode/1up 
+
+https://www.biodiversitylibrary.org/item/194567#page/134/mode/1up 
+
+https://www.biodiversitylibrary.org/item/194567#page/212/mode/1up 
+
+https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~333962~90102153:Shanghai---1880--?sort=pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no&qvq=w4s:/where%2FShanghai%2B(China);q:shanghai;sort:pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no;lc:RUMSEY~8~1&mi=6&trs=8 ","II, 415-537","""The Novara did not remain long behind us. A few days later, on 29th July, she sailed gallantly up 
+in an hour and a half, from Wusung, on the top of a spring-tide, and with favourable breezes, 
+and on reaching Shanghai was welcomed with pride and delight by the German residents here
+—the first ship-of-war of a first-class German power that had ever been seen in the river Wusung.""
+[II, 415]",,,31.233545,121.490697
+26,SHANGHAI,Wusung River,Shanghai,Chinese Empire,Mooring,31° 23' 29.923''N 121° 30' 39.457''E,"31.39164521003513, 121.51096031017767",11/08/1858,15/08/1858,4,"II, 307-308","https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2210581 
+
+https://www.biodiversitylibrary.org/item/194567#page/134/mode/1up
+
+https://www.virtualshanghai.net/Maps/Collection?ID=799 ","II, 537-538","""On the 11th of August the Novara quitted her anchorage off Shanghai, and with the steam-tug Meteor
+fastened to her side availed herself of a spring tide to make her way into the Yang- tse-Kiang. 
+Off Wusung we awaited the arrival of the post, after receiving which we were on 14th August towed 
+as far as Grutzlaff's Island. Here we had once more to lay to, owing to calms and currents, 
+till at last on the 15th August a fresh breeze sprang up from the S. E., and enabled us to make an offing.""
+[II, 537-538]",,,31.39164521,121.5109603
+27,POHNPEI (Puynipet),Puynipet,Caroline Islands,,Mooring,"6°46'55.5""N 158°09'31.8""E","6.782079, 158.158844",18/09/1858,18/09/1858,0,"II, 319-340",https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2210683 ,"II, 556-586","""We now endeavoured to enter between Nahlap Island on the west, covered with cocoa-palms and 
+bread-fruit, and Sandy Island on the east, surrounded with a belt of raging foam,
+its coral masses clothed with low scanty brushwood. But almost immediately ""Halt"" was once more
+the order. [...] While therefore the frigate once more made sail, a survey of the island and
+harbour was ordered by a boat expedition."" [II, 558-559]",,,6.782079,158.158844
+28,SIKAYANA (SOLOMON ISLANDS),Sikayana,Stewart Islands,,Mooring,"8°22'00.9""S 162°41'49.5""E","-8.366906, 162.697071",17/10/1858,17/10/1858,0,"II, 352-365","https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2210724 
+","II, 601-622","""On the morning of 17th October, three boats put off from the Novara with some of the officers
+and all the naturalists of the Expedition, bound for Sikayana, between three and four miles distant, 
+while the frigate cruised about in the vicinity."" [II, 604]",,,-8.366906,162.697071
+29,SYDNEY,SYDNEY,Australia,British Empire,Port,"33°51'28.6""S 151°13'48.2""E","-33.857931, 151.230061",05/11/1858,07/12/1858,32,"II, 368
+III, 1-84","https://www.biodiversitylibrary.org/item/194567#page/249/mode/1up 
+
+https://www.biodiversitylibrary.org/item/194567#page/270/mode/1up
+
+https://www.biodiversitylibrary.org/item/194567#page/289/mode/1up
+
+https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2211274","II, 627
+III, 1-90","""At 6 p. M., after a voyage of 82 days, during which we had sailed 5930 miles, the anchor was 
+let go in the magnificent harbour of Port Jackson, off Garden Island, to the N. E. of the city of Sydney. 
+We had reached in safety the fifth quarter of the globe!"" [II, 627]",,,-33.857931,151.230061
+30,"AUCKLAND, NORTH ISLAND, NZ",Auckland,New Zealand,British Empire,Harbour,"36°50'12.2""S 174°46'05.5""E","-36.836715, 174.768202",22/12/1858,08/01/1859,17,"III, 85-143","https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2211274
+
+https://www.biodiversitylibrary.org/item/194567#page/318/mode/1up
+
+https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~360120~90127228:The-harbour-and-city-of-Auckland-th?sort=pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no&qvq=q:auckland;sort:pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no;lc:RUMSEY~8~1&mi=0&trs=35","III, 91-176","""Our arrival off New Zealand was signalized by most un- usual calms, which indeed materially delayed 
+our entrance into Huraka Gulf, a sort of lateral bay, entering from the harbour of Auckland. 
+A bark, which had sailed from Sydney three days before us, had, as we were informed by our pilot, 
+been one day in harbour. We now had to tack slowly up under faint puffs of wind towards the anchorage, 
+which we reached finally at 5.30 p. M. of the 22nd December, 1858."" [III, 91-92]",,,-36.836715,174.768202
+31,TAHITI,Papeete,Polynesia,French Empire,Harbour,"17°32'22.9""S 149°34'52.3""W","-17.539697, -149.581201",11/02/1859,28/02/1859,17,"III,160-199","https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2211359
+
+https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2211400  
+
+https://www.biodiversitylibrary.org/item/194567#page/345/mode/1up 
+
+https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~315253~90084183:Plate-66-from-Vol--1--Otahiete?sort=pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no&qvq=q:tahiti;sort:pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no;lc:RUMSEY~8~1&mi=18&trs=114 
+
+https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~328754~90096916:Tav--CXXXVIII--Vic--Tahiti----Isole?qvq=q:micronesia;lc:RUMSEY~8~1&mi=4&trs=10 ","III, 197-255","""At length, on 11th February, we came in sight of Tahiti [...]. At 6 p.m. we cast anchor in 11 fathoms
+water, in clay ground. In the harbour [...]."" [III, 196-197]",,,-17.539697,-149.581201
+32,VALPARAISO (CHILE),Valparaiso,Chile,,Roadstead,"33°01'43.5""S 71°37'22.3""W","-33.028737, -71.622848",16/04/1859,11/05/1859,25,"III, 219-253","https://www.biodiversitylibrary.org/item/194567#page/374/mode/1up 
+
+https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2211436 
+
+https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~23002~790026:City-of-Valparaiso--with--Monticell?qvq=w4s:/when%2F1876;q:valparaiso;lc:RUMSEY~8~1&mi=1&trs=3 
+
+https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~232993~5509514:Plan-du-port-de-Valparaiso-?qvq=w4s:/where%2FValparaiso%2B(Chile);q:valparaiso;lc:RUMSEY~8~1&mi=1&trs=4 
+
+https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~333954~90102151:Valparaiso---1880--?qvq=q:valparaiso;lc:RUMSEY~8~1&mi=4&trs=169 ","III, 278-323","""[...] the result of which was that on the following morning it was only by the efforts of some 
+tow-boats dispatched to our assist- ance by the commander of H. B. M. ship of the line ""Ganges,"" 
+and the French corvette ""Hurydice,"" that we were enabled, by 3.30 P.M., to reach Valparaiso 
+in the midst of a profound calm, when our anchor was let go in 25 fathoms, good holding ground, 
+in an excellent roomy berth, away from the bustle of the merchantmen."" [III, 278-279]",,,-33.028737,-71.622848
+33,GIBRALTAR,Gibraltar,,British Empire,Harbour,"36°08'05.5""N 5°22'19.6""W","36.134852, -5.372100",01/08/1859,07/08/1859,6,"III, 355-356",https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2211486 ,"III, 449-451","""EIGHTY-TWO days elapsed between the departure of the Novafa from Valparaiso and her arrival 
+in the harbour of Gibraltar. They had been as many days of dreadful trial and disaster for our country!""
+[III, 449]",,,36.134852,-5.3721
+34,"GRAVOSA (RAGUSA, DALMATIA)",Gravosa,Dalmatia,Austrian Empire,Harbour,"42°39'30.5""N 18°05'06.0""E","42.658480, 18.085000",19/08/1859,22/08/1859,3,"III, 357-358",https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2211608 ,"III, 452-453","""On the night of the 19th August we were off Cape Santa Maria di Leuca, which marks the entrance
+ of the Adriatic Gulf, and in the afternoon of the following day passed Caste Nuovo near Cattaro, 
+and the same night anchored in the harbour of Gravosa in Dalmatia."" [III, 452]",,,42.65848,18.085
+35,POLA,Pola,Istria,Austrian Empire,Arsenal,"44°52'04.7""N 13°50'16.8""E","44.868169871974935, 13.838064369748862",25/08/1859,25/08/1859,0,"III, 359-361",https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2211608,"III, 453-455","""On the 25th August we passed, during the morning, the light-tower of Promontore, 
+standing on a solitary rock that rises out of the sea, hardly a cable's length from the shore, 
+and at 11 reached Pola, the chief naval arsenal of Austria."" [III, 453]",Uljanik Brodograd 1856 o.o.,https://www.uljanik.hr/en/,44.86816987,13.83806437
+36,MUGGIA,Muggia,Istria,Austrian Empire,Harbour,45°36′30.348″N 13°45′52.287″E,"45.60843011052481, 13.764524243330953",26/08/1859,,,"III, 361",https://archiviodistatotrieste.it/doc-mos/mappa-della-rada-di-trieste-e-della-baia-di-muggia-con-navi-affondate/,"III, 455","""In the evening we again set sail, and about 11 A. M. of the 26th [...] we neared the imposing 
+roadstead of Trieste. As the Novara passed beneath the walls of the splendid chateau of Miramar, [...]
+a guard of artillery saluted the home-returning wanderer, and almost immediately 
+afterwards the cannon of the citadel of Trieste thundered forth their salute. [...] the procession. The
+latter made its way, enveloped in clouds of smoke, to the picturesquely-situated city, 
+as far as the Bay of Muggia, where each ship let go her anchor in her appointed position, and—
+THE VOYAGE WAS OVER."" [III, 455]",,,45.60843011,13.76452424

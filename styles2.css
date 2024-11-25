@@ -1,0 +1,1965 @@
+/* General Page Styling */
+body,
+html {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #faf5f1;
+    /* Light beige background */
+    color: #191919;
+    /* Dark text color */
+    overflow-y: auto;
+}
+
+main {
+    display: flex;
+    height: auto;
+    /* Allow content to determine height */
+    overflow: visible;
+    /* Make sure content isn't clipped */
+}
+
+/* Header Styling */
+.header {
+    background-color: #191919;
+    /* Dark header background */
+    border-bottom: 1px solid #836f64;
+    /* Subtle accent border */
+    padding: 7px 10px;
+    /* Increased padding for breathing room */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    /* More pronounced shadow */
+    position: sticky;
+    /* Stick header to top */
+    top: 0;
+    z-index: 1000;
+    /* Keep it above other elements */
+}
+
+/* Logo Image Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: 5px 25px;
+    /* Adjusted padding */
+    border-radius: 25px;
+    /* Rounded corners for smoothness */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    /* More pronounced shadow */
+}
+
+.logo-image {
+    max-height: 60px;
+    /* Adjust size as needed */
+    width: auto;
+    display: block;
+}
+
+/* Icon Button Styling */
+.circle-btn {
+    background-color: #c5b799;
+    /* Light beige button background */
+    border: 1px solid #c5b799;
+    /* Accent border */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #191919;
+    /* Dark text color */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Pronounced shadow */
+    transition: transform 0.2s ease, background-color 0.3s;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.circle-btn:hover {
+    background-color: #c5b799;
+    /* Accent color on hover */
+    transform: scale(1.1);
+    /* Slight enlargement on hover */
+}
+
+/* Icon Group Styling */
+.header-icons {
+    display: flex;
+    gap: 15px;
+    /* Consistent spacing between buttons */
+}
+
+/* Map Styling */
+.map-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 80px);
+    /* Default height for larger screens */
+    background-color: #faf5f1;
+    /* Match background theme */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    /* Shadow around the map */
+    overflow: hidden;
+    transition: height 0.3s ease;
+    /* Smooth transition for height changes */
+}
+
+
+
+/* Responsive Design with Media Queries */
+
+/* For smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        /* Stack items vertically */
+        padding: 7px;
+    }
+
+    .logo-container {
+        padding: 5px 10px;
+    }
+
+    .header-icons {
+        gap: 10px;
+        /* Reduce spacing between icons */
+    }
+
+    .circle-btn {
+        width: 30px;
+        /* Smaller buttons */
+        height: 30px;
+        font-size: 1rem;
+        /* Adjust font size */
+    }
+
+    .logo-image {
+        max-height: 50px;
+        /* Reduce logo size */
+    }
+
+    .map-container {
+        height: 100vh;
+        /* Slightly reduced height for tablets */
+    }
+}
+
+/* For very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .header {
+        padding: 5px;
+    }
+
+    .logo-container {
+        padding: 5px 10px;
+    }
+
+    .circle-btn {
+        width: 20px;
+        /* Even smaller buttons */
+        height: 20px;
+        font-size: 0.75rem;
+    }
+
+    .logo-image {
+        max-height: 40px;
+        /* Further reduce logo size */
+    }
+
+    .map-container {
+        height: 100vh;
+        /* Reduced height to 50% of the viewport */
+    }
+}
+
+.leaflet-marker-icon {
+    transition: all 0.3s ease;
+}
+
+/* Left Panel Styling */
+.left-panel {
+    position: absolute;
+    top: 100px;
+    /* Space from the top */
+    left: 10px;
+    /* Space from the left */
+    width: 220px;
+    /* Fixed width for the panel */
+    background: #f9f9f9;
+    /* White background */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+    overflow-y: auto;
+    /* Allow scrolling if content overflows */
+    z-index: 1000;
+    /* Ensure it's above other map elements */
+    height: calc(100vh - 300px);
+    /* Full viewport height minus some space */
+    padding: 10px;
+    /* Add some padding inside */
+    line-height: 1.5rem;
+
+}
+
+.left-panel {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.left-panel.hidden {
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* Stopover List Styling */
+.stopover-list {
+    list-style: none;
+    /* Remove default list styles */
+    margin: 0;
+    /* Reset margins */
+    padding: 0;
+    /* Reset padding */
+}
+
+/* Individual Stopover Items */
+.stopover-list li {
+    padding-left: 25px;
+    /* Space between bullet and text */
+    padding-top: 5px;
+    /* Add space above each item */
+    padding-bottom: 5px;
+    /* Add space below each item */
+    position: relative;
+    /* For pseudo-elements */
+    font-size: 0.75rem;
+    /* Font size for text */
+    color: #333;
+    /* Text color */
+    cursor: pointer;
+    /* Pointer cursor for interactivity */
+    border-bottom: 1px solid #ddd;
+    /* Divider between items */
+    align-items: center;
+    gap: 10px;
+    /* Space between icon and text */
+    line-height: 1.8rem;
+    /* Increase line height for better spacing */
+}
+
+
+
+
+/* Stopover Hover Effect */
+.stopover-list li:hover {
+    background-color: #dde1e4;
+    /* Subtle background change on hover */
+}
+
+/* Line and Bullet Styling */
+.stopover-list li::before {
+    content: '';
+    /* Empty content for the bullet */
+    width: 8px;
+    /* Bullet size */
+    height: 8px;
+    /* Bullet size */
+    background-color: #878889;
+    /* Blue bullet color */
+    border-radius: 50%;
+    /* Make it a circle */
+    position: absolute;
+    /* Positioning for alignment */
+    left: 0;
+    /* Align to the left edge */
+    top: 50%;
+    /* Center vertically */
+    transform: translateY(-50%);
+    /* Adjust position to perfectly center */
+}
+
+.stopover-list li::after {
+    content: '';
+    /* Empty content for the vertical line */
+    width: 2px;
+    /* Line thickness */
+    height: calc(100% + 16px);
+    /* Height for connecting line (16px adds gap) */
+    background-color: #ddd;
+    /* Light gray line color */
+    position: absolute;
+    /* Positioning for alignment */
+    left: 4px;
+    /* Align with the bullet */
+    top: 0;
+    /* Start from the top of the list item */
+    z-index: -1;
+    /* Place it behind the bullet */
+}
+
+/* Active Stopover (Clicked) */
+.stopover-list li.active::before {
+    background-color: orange !important;
+    /* Change bullet color to orange */
+}
+
+
+/* Last Item (no connecting line below it) */
+.stopover-list li:last-child::after {
+    display: none;
+    /* Remove line for the last item */
+}
+
+/* Last Item (no connecting line below it) */
+.stopover-list li:last-child::after {
+    content: none;
+    /* Remove line for the last item */
+}
+
+
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .left-panel {
+        width: 180px;
+        /* Reduce the width */
+        top: 100px;
+        /* Adjust top spacing */
+        height: calc(100vh - 300px);
+        /* Adjust height */
+        line-height: 1.5rem;
+        /* Proper spacing for vertical alignment */
+    }
+
+    .stopover-list li {
+        font-size: 0.7rem;
+        /* Smaller font size */
+        padding-top: 3px;
+        /* Add space above each item */
+        padding-bottom: 3px;
+        /* Add space below each item */
+
+        line-height: 1.5rem;
+        /* Increase line height for better spacing */
+    }
+
+    .stopover-list li::before {
+        font-size: 1.2rem;
+        /* Adjust bullet size */
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+    .left-panel {
+        width: 130px;
+        /* Further reduce the width */
+        top: 70px;
+        /* Adjust top spacing */
+        height: 40%;
+        /* Adjust height */
+        line-height: 1.25rem;
+        /* Proper spacing for vertical alignment */
+    }
+
+    .stopover-list li {
+        font-size: 0.6rem;
+        /* Smaller font size */
+        line-height: 1.25rem;
+        /* Increase line height for better spacing */
+    }
+
+    .stopover-list li::before {
+        font-size: 1rem;
+        /* Adjust bullet size */
+    }
+}
+
+/* For ultra-small screens (landscape mode or very narrow devices) */
+@media (max-width: 360px) {
+    .left-panel {
+        width: 110px;
+        /* Minimum width */
+        top: 70px;
+        /* Adjust top spacing */
+        height: 40%;
+        padding: 5px;
+        /* Reduce padding */
+
+    }
+
+    .stopover-list li {
+        font-size: 0.55rem;
+        /* Smaller font size */
+    }
+
+    .stopover-list li::before {
+        font-size: 0.8rem;
+        /* Adjust bullet size */
+    }
+}
+
+/* Bottom Panel Styling */
+.bottom-panel {
+    position: absolute;
+    /* Keep the panel at the bottom */
+    bottom: 20px;
+    /* Maintain a consistent distance from the bottom */
+    left: 10px;
+    /* Align it to the left */
+    display: flex;
+    flex-direction: row;
+    /* Default layout: row */
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    justify-content: space-around;
+    /* Evenly space the stats */
+    align-items: left;
+    width: 280px;
+    /* Fixed width for consistency */
+    max-width: 400px;
+    /* Limit width on larger screens */
+    transition: all 0.3s ease;
+    /* Smooth transition for any changes */
+    gap: 5px;
+
+}
+
+.bottom-panel {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.bottom-panel.hidden {
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.bottom-panel .stat {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    /* Equal spacing for stats */
+}
+
+.bottom-panel .stat i {
+    font-size: 18px;
+    /* Icon size */
+}
+
+.bottom-panel .stat .label {
+    font-size: 8px;
+    color: #999;
+    /* Light gray for label */
+    text-align: left;
+    margin-bottom: 3px;
+}
+
+.bottom-panel .stat .count {
+    font-size: 14px;
+    color: #333;
+    /* Dark gray for count */
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Responsive Adjustments for Tablets */
+@media (max-width: 768px) {
+    .bottom-panel {
+        width: 260px;
+        /* Slightly reduce width for smaller screens */
+        bottom: 30px;
+        /* Keep the same distance from the bottom */
+        left: 10px;
+        /* Align to the left */
+    }
+
+    .bottom-panel .stat {
+        gap: 5px;
+        /* Adjust spacing between items */
+    }
+
+    .bottom-panel .stat i {
+        font-size: 14px;
+        /* Smaller icon size */
+    }
+
+    .bottom-panel .stat .label {
+        font-size: 8px;
+        /* Adjust font size for labels */
+    }
+
+    .bottom-panel .stat .count {
+        font-size: 12px;
+        /* Adjust font size for counts */
+    }
+}
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 480px) {
+    .bottom-panel {
+        width: auto;
+        bottom: 20px;
+        left: 10px;
+        padding: 10px;
+        flex-direction: column;
+        align-items: left;
+        gap: 5px;
+    }
+
+    .bottom-panel .stat {
+        gap: 5px;
+        align-items: flex-start;
+    }
+
+    .bottom-panel .stat i {
+        font-size: 12px;
+    }
+
+    .bottom-panel .stat .label {
+        font-size: 8px;
+    }
+
+    .bottom-panel .stat .count {
+        font-size: 10px;
+    }
+}
+
+/* Popup Content Wrapper */
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+
+    background: transparent;
+    color: transparent;
+    border: transparent;
+    box-shadow: none;
+}
+
+
+.leaflet-popup-close-button {
+    display: none;
+}
+
+.leaflet-container .leaflet-control-attribution,
+.leaflet-container .leaflet-control-scale {
+    display: none;
+    font-size: 11px;
+}
+
+
+/* General Popup Styling */
+.stopover-popup-container {
+    background: white;
+    font-family: Arial, sans-serif;
+    width: auto;
+    max-width: 300px;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+/* Gradient Circle */
+.stopover-popup-circle {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #ffa726, #ffeb3b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 0;
+}
+
+.stopover-popup-inner-circle {
+    width: 10px;
+    height: 10px;
+    background: #ffa726;
+    border-radius: 50%;
+}
+
+/* Text Content */
+.stopover-popup-text {
+    flex: 1;
+    min-width: 60px;
+    display: flex;
+    flex-direction: column;
+    order: 1;
+}
+
+.stopover-popup-main-text {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #333;
+    word-wrap: break-word;
+}
+
+.stopover-popup-additional-text {
+    margin-top: 5px;
+    font-size: 0.6rem;
+    color: #888;
+    word-wrap: break-word;
+}
+
+/* Responsive Adjustments */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+
+    .stopover-popup-container {
+        min-width: 100px;
+        padding: 5px;
+        gap: 2px;
+    }
+
+    .stopover-popup-circle {
+        width: 15px;
+        height: 15px;
+    }
+
+    .stopover-popup-inner-circle {
+        width: 8px;
+        height: 8px;
+    }
+
+    .stopover-popup-main-text {
+        font-size: 0.7rem;
+    }
+
+    .stopover-popup-additional-text {
+        font-size: 0.5rem;
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+
+
+    .stopover-popup-circle {
+        width: 12px;
+        height: 12px;
+    }
+
+    .stopover-popup-inner-circle {
+        width: 6px;
+        height: 6px;
+    }
+
+    .stopover-popup-main-text {
+        font-size: 0.6rem;
+    }
+
+    .stopover-popup-additional-text {
+        font-size: 0.4rem;
+    }
+}
+
+/* General Popup Styling */
+.popup-container {
+    background: white;
+    font-family: Arial, sans-serif;
+    max-width: 230px;
+    padding: 0;
+    /* Remove padding for image alignment */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    /* Ensure no content overflows */
+    border: 1px solid #ffa726;
+    /* Orangy-yellow border */
+}
+
+
+.popup-image {
+    width: 100%;
+    /* Image spans the full width */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Remove extra spacing */
+    border-radius: 8px 8px 0 0;
+    /* Rounded corners on top only */
+}
+
+.popup-body {
+    padding: 0 10px 5px 10px; /* Top: 0, Right: 5px, Bottom: 5px, Left: 5px */
+}
+
+
+.popup-highlight {
+    margin: 5px 0;
+    font-size: 0.85rem;
+}
+
+.popup-body p {
+    margin: 5px 0;
+    font-size: 0.7rem;
+    color: #555;
+}
+
+.popup-body p strong {
+    color: #333;
+}
+
+/* Highlight for important data */
+.popup-highlight {
+    color: #2a9d8f;
+    font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .popup-highlight {
+        margin: 3px 0;
+        font-size: 0.65rem;
+    }
+
+    .popup-container {
+        max-width: 170px;
+    }
+
+    .popup-body p {
+        font-size: 0.55rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-highlight {
+        margin: 2px 0;
+        font-size: 0.6rem;
+    }
+
+    .popup-container {
+        max-width: 150px;
+    }
+
+    .popup-body p {
+        font-size: 0.45rem;
+    }
+}
+
+
+.info-panel {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    width: 300px;
+    max-height: 80vh; /* Limit panel height to 80% of the viewport */
+    background: #f9f9f9; /* Light beige color for the panel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    z-index: 1000;
+    display: none; /* Initially hidden */
+    overflow-y: auto; /* Add scroll for overflowing content */
+    padding: 10px 20px;
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for showing/hiding */
+    opacity: 0; /* Initially hidden */
+}
+
+.info-panel.show {
+    display: block;
+    opacity: 1; /* Make visible when active */
+    margin-top: 0;
+}
+
+.info-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.info-panel-header h2 {
+    font-size: 1.25rem; /* Slightly larger font size for the title */
+    margin: 0;
+    color: #927f51; /* Dark brown for the header text */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.close-info-panel {
+    
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: black; /* Red for the close button */
+    z-index: 1002;
+}
+
+.info-panel-content {
+    font-size: 0.9rem;
+    line-height: 1.25;
+    color: #4e342e; /* Rich brown for text */
+}
+
+.info-panel-content p {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #d7ccc8; /* Light brown separator */
+    padding-bottom: 5px;
+}
+.info-panel-content p span {
+    font-weight: bold;
+    text-transform: none; /* Ensure JavaScript handles case transformation */
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.info-panel-content {
+    word-wrap: break-word; /* Break long words or links */
+    overflow-wrap: break-word; /* Ensure wrapping for long links */
+}
+
+.info-panel-content a {
+    font-style: italic;
+    text-decoration: none; /* Remove underline */
+    color:#4e342e;
+
+}
+
+.info-panel-content a:hover {
+    color: #104e8b; /* Darker blue on hover for contrast */
+    text-decoration: underline; /* Add underline on hover for clarity */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+
+.info-panel-content p:last-child {
+    border-bottom: none; /* No separator for the last item */
+}
+
+.info-panel img {
+    display: block; /* Ensure the image behaves like a block-level element */
+    margin: 0 auto; /* Horizontally centers the image */
+    width: 90%;
+    border-radius: 8px;
+    object-fit: cover; /* Ensures the image fits nicely */
+    margin-bottom: 20px; /* Space below the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .info-panel {
+        top: 100px;
+        width: 250px;
+        max-height: 80vh; /* Limit panel height to 80% of the viewport */
+        background: #f9f9f9; /* Light beige color for the panel */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+        z-index: 1000;
+        display: none; /* Initially hidden */
+        overflow-y: auto; /* Add scroll for overflowing content */
+        padding: 10px 15px;
+        border-radius: 8px; /* Rounded corners */
+        transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for showing/hiding */
+        opacity: 0; /* Initially hidden */
+    }
+
+    .info-panel-header {
+        margin-bottom: 15px;
+    }
+   
+    .info-panel-header h2 {
+        font-size: 1rem; /* Slightly larger font size for the title */
+    }
+    
+    .close-info-panel {
+        
+        font-size: 1rem;
+    }
+
+    .info-panel-content {
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
+    
+    .info-panel-content p {
+        margin-bottom: 8px;
+        padding-bottom: 5px;
+    }
+    .info-panel-content p span {
+        margin-right: 5px;
+    }
+    
+    
+    .info-panel img {
+        display: block; /* Ensure the image behaves like a block-level element */
+        margin: 0 auto; /* Horizontally centers the image */
+        width: 80%;
+        border-radius: 8px;
+        object-fit: cover; /* Ensures the image fits nicely */
+        margin-bottom: 15px; /* Space below the image */
+    }
+}
+
+
+/* For mobile and smaller screens */
+@media (max-width: 480px) {
+    .info-panel {
+        top: 70px;
+        width: 210px;
+        max-height: 70vh; /* Limit panel height to 80% of the viewport */
+        background: #f9f9f9; /* Light beige color for the panel */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+        z-index: 1000;
+        display: none; /* Initially hidden */
+        overflow-y: auto; /* Add scroll for overflowing content */
+        padding: 8px 12px;
+        border-radius: 8px; /* Rounded corners */
+        transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for showing/hiding */
+        opacity: 0; /* Initially hidden */
+    }
+
+    .info-panel-header {
+        margin-bottom: 10px;
+    }
+   
+    .info-panel-header h2 {
+        font-size: 0.85rem; /* Slightly larger font size for the title */
+    }
+    
+    .close-info-panel {
+        
+        font-size: 1rem;
+    }
+
+    .info-panel-content {
+        font-size: 0.65rem;
+        line-height: 0.9rem;
+    }
+    
+    .info-panel-content p {
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+    }
+    .info-panel-content p span {
+        margin-right: 5px;
+    }
+    
+    
+    .info-panel img {
+        margin-bottom: 10px; /* Space below the image */
+        width: 70%;
+    }
+}
+
+/* Right Panel Styling */
+#right-panel {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    width: 320px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+#right-panel.hidden {
+    display: none;
+}
+
+/* Close Button Styling */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    /* Smaller size */
+    color: #333;
+    cursor: pointer;
+    line-height: 1;
+    padding: 5px;
+    z-index: 100;
+}
+
+.close-button:hover {
+    color: #2a9d8f;
+    /* Highlight color on hover */
+}
+
+/* Panel Content Padding Adjustment */
+.panel-content {
+    position: relative;
+    /* Required for the close button */
+}
+
+
+
+.divider {
+    border: none;
+    height: 1px;
+    background: #ddd;
+    margin: 10px 0;
+}
+
+.panel-content h3 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.panel-content p {
+    font-size: 0.75rem;
+    color: #555;
+    margin: 0;
+}
+
+
+/* Filter Section */
+.filter-section {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.filter-section h2 {
+    font-size: 1rem;
+    color: #927f51;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 2px;
+    color: #555;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 5px 8px;
+    font-size: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    font-size: 0.75rem;
+    color: #aaa;
+}
+
+.filter-row {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.filter-row div {
+    flex: 1;
+}
+
+.results-section h2 {
+    font-size: 1rem;
+    color: #927f51;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* Responsive grid layout */
+    gap: 5px;
+    /* Space between items */
+    max-height: 400px;
+    /* Set height for scrollable content */
+    overflow-y: auto;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    padding: 5px;
+    border-top: 1px solid #ddd;
+    background: #f9f9f9;
+    gap: 5px;
+    /* Space between buttons */
+}
+
+.pagination button {
+    padding: 3px 8px;
+    /* Decreased padding for smaller buttons */
+    font-size: 0.8rem;
+    /* Reduced font size */
+    border: none;
+    border-radius: 4px;
+    /* Slightly smaller border radius */
+    background-color: #2a9d8f;
+    color: white;
+    font-weight: 600;
+    /* Slightly less bold for text */
+    cursor: pointer;
+}
+
+.pagination button[disabled] {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.pagination-info {
+    font-size: 0.75rem;
+    /* Reduced font size for pagination info */
+    color: #555;
+    flex-grow: 1;
+    /* Push buttons to the edges */
+    text-align: center;
+    /* Center align text */
+}
+
+
+
+
+.result-details {
+    display: flex;
+    /* Arrange items in a row */
+    flex-wrap: wrap;
+    /* Allow wrapping if space is insufficient */
+    align-items: center;
+    /* Align items vertically */
+    gap: 10px;
+    /* Space between items */
+    font-size: 0.65rem;
+    /* Adjust font size */
+}
+
+.result-details p {
+    font-size: 0.65rem;
+    margin: 0;
+    /* Remove unnecessary margins */
+    white-space: nowrap;
+    /* Prevent text wrapping */
+}
+
+.result-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #f9f9f9;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    gap: 5px;
+}
+
+.result-item .result-id {
+    font-size: 0.65rem;
+    color: #999;
+}
+
+.result-item .result-tag {
+    font-size: 0.6rem;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 2px 8px;
+    color: white;
+    display: inline-block;
+}
+
+.result-tag.persons {
+    background: #264653;
+}
+
+.result-tag.collections {
+    background: #f4a261;
+}
+
+.result-tag.documents {
+    background: #2a9d8f;
+}
+
+.result-tag.institutions {
+    background: #d4a017;
+}
+
+/* Responsive Layout for Tablets */
+@media (max-width: 768px) {
+    #right-panel {
+        top: 100px;
+        right: 10px;
+        width: 260px;
+        padding: 10px;
+    }
+
+
+
+    .close-button {
+        font-size: 0.9rem;
+        padding: 3px;
+    }
+
+    .pagination button {
+        padding: 2px 6px;
+        /* Smaller padding for buttons */
+        font-size: 0.75rem;
+    }
+
+    .pagination-info {
+        font-size: 0.7rem;
+    }
+
+    label {
+        font-size: 0.8rem;
+    }
+
+    input,
+    select {
+        padding: 4px 6px;
+        font-size: 0.7rem;
+    }
+
+    .filter-section h2,
+    .results-section h2 {
+        font-size: 0.9rem;
+    }
+
+    .result-details p {
+        font-size: 0.6rem;
+    }
+}
+
+/* Responsive Layout for Tablets */
+@media (max-width: 570px) {
+    #right-panel {
+        top: 100px;
+        right: 10px;
+        width: 250px;
+        padding: 8px;
+    }
+
+
+
+    .close-button {
+        font-size: 0.9rem;
+        padding: 2px;
+    }
+
+    .pagination button {
+        padding: 2px 6px;
+        /* Smaller padding for buttons */
+        font-size: 0.7rem;
+    }
+
+    .pagination-info {
+        font-size: 0.65rem;
+    }
+
+    label {
+        font-size: 0.75rem;
+    }
+
+    input,
+    select {
+        padding: 4px 6px;
+        font-size: 0.65rem;
+    }
+
+    .filter-section h2,
+    .results-section h2 {
+        font-size: 0.8rem;
+    }
+
+    .result-details p {
+        font-size: 0.6rem;
+    }
+}
+
+/* Responsive Layout for Mobile */
+/* For mobile screens */
+
+@media (max-width: 480px) {
+    #right-panel {
+        top: 70px;
+        right: 10px;
+        width: 200px;
+        padding: 8px;
+    }
+
+
+
+    .close-button {
+        font-size: 0.9rem;
+        padding: 2px;
+    }
+
+    .pagination button {
+        padding: 2px 4px;
+        /* Smaller padding for buttons */
+        font-size: 0.6rem;
+    }
+
+    .pagination-info {
+        font-size: 0.6rem;
+    }
+
+    label {
+        font-size: 0.75rem;
+    }
+
+    input,
+    select {
+        padding: 4px 6px;
+        font-size: 0.65rem;
+    }
+
+    .filter-section h2,
+    .results-section h2 {
+        font-size: 0.8rem;
+    }
+
+    .result-details p {
+        font-size: 0.6rem;
+    }
+}
+
+/* @media (max-width: 480px) {
+    #right-panel {
+        position: absolute;
+        margin: 10px auto;
+        width: calc(100% - 10px); 
+        box-shadow: none;
+        border: 1px solid #ddd;
+        top: 55%; 
+        left: 5px; 
+        right: 5px; 
+    }
+
+    .panel-content {
+        display: flex;
+        flex-direction: row; 
+        gap: 5px; 
+        justify-content: space-between; 
+        align-items: flex-start;
+       
+    }
+
+    .filter-section {
+        flex: 0 0 45%; 
+        margin-right: 5px; 
+        box-sizing: border-box; 
+    }
+
+    .results-section {
+        flex: 0 0 55%;
+        margin-left: 5px; 
+        box-sizing: border-box; 
+    }
+
+    .filter-section h2,
+    .results-section h2 {
+        font-size: 0.85rem; 
+    }
+
+    .filter-row {
+        flex-wrap: wrap; 
+        gap: 8px; 
+    }
+
+    label {
+        font-size: 0.7rem;
+    }
+
+    input,
+    select {
+        font-size: 0.7rem; 
+        padding: 5px;
+    }
+
+    .result-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 5px; 
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        margin-top: 10px;
+    }
+
+    .pagination button {
+        padding: 3px 5px;
+        font-size: 0.7rem;
+    }
+
+    .pagination-info {
+        font-size: 0.65rem; 
+    }
+} */
+
+
+/* Bottom Navigation Styling */
+.bottom-nav {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    background: #f9f9f9;
+    border-radius: 8px 8px 0 0;
+    /* Rounded corners on top only */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    padding: 5px 10px;
+    gap: 15px;
+    align-items: center;
+}
+
+.bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #555;
+    font-size: 0.85rem;
+}
+
+.bottom-nav-item i {
+    font-size: 1rem;
+    color: #2a9d8f;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.bottom-nav-item:hover {
+    color: #264653;
+    font-weight: bold;
+}
+
+.bottom-nav-item.active {
+    color: #264653;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .bottom-nav {
+        padding: 5px 8px;
+        /* Reduce padding */
+        gap: 8px;
+    }
+
+    .bottom-nav-item {
+        font-size: 0.75rem;
+    }
+
+    .bottom-nav-item i {
+        font-size: 0.9rem;
+        /* Adjust icon size */
+    }
+}
+
+@media (max-width: 480px) {
+    .bottom-nav {
+        padding: 3px 5px;
+        /* Reduce padding */
+        gap: 8px;
+    }
+
+    .bottom-nav-item {
+        font-size: 0.7rem;
+    }
+
+    .bottom-nav-item i {
+        font-size: 0.9rem;
+        /* Adjust icon size */
+    }
+}
+
+
+/* Grid Container Styling */
+.grid-container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    display: none;
+    /* Hidden by default */
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 2000;
+    height: auto;
+    padding: 10px;
+}
+
+.grid-container.show {
+    display: flex;
+    /* Show on trigger */
+}
+
+/* Header Styling */
+.grid-header {
+    padding: 5px;
+    background: #4e342e;
+    color: #f9f9f9;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Body Content Styling */
+.grid-body {
+    margin-top: 20px;
+    padding: 10px;
+    max-height: 400px;
+    /* Limit height for scrollability */
+    overflow-y: auto;
+    background: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+.grid-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.65rem;
+    background: white;
+}
+
+/* Alternate Row Colors */
+.grid-table tbody tr:nth-child(odd) {
+    background: #dde1e4; /* Light gray for odd rows */
+}
+
+.grid-table tbody tr:nth-child(even) {
+    background: #f9f9f9; /* White for even rows */
+}
+
+.grid-table th {
+    background: #f4f4f4;
+    font-weight: bold;
+    color: #555;
+}
+
+.grid-table th {
+    background: #927f51; /* Medium brown for header cells */
+    font-weight: bold;
+    color: #f9f9f9; /* Light beige for text */
+    text-align: left;
+    padding: 8px;
+}
+
+.grid-table td {
+    padding: 8px; /* Add padding for spacing */
+    white-space: nowrap; /* Keep content on one line */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Ellipsis for overflowing content */
+    color: #1c1c1c; /* Dark brown for table text */
+}
+
+/* Actions Column Styling */
+.grid-actions {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+/* Style for actions column */
+.grid-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Icons styling */
+.edit-icon {
+    color: #28a745; /* Green for update */
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.edit-icon:hover {
+    transform: scale(1.2);
+    color: #218838; /* Darker green on hover */
+}
+
+.delete-icon {
+    color: #dc3545; /* Red for delete */
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.delete-icon:hover {
+    transform: scale(1.2);
+    color: #c82333; /* Darker red on hover */
+}
+
+
+.grid-table tbody tr {
+    height: 50px;
+    /* Fixed row height */
+}
+
+.grid-table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 150px;
+    /* Adjust as needed */
+    font-size: 0.65rem;
+}
+
+.grid-table td[title] {
+    cursor: help;
+}
+
+.grid-table td[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    background: rgba(0, 0, 0, 0.75);
+    color: #dde1e4;
+    padding: 5px 5px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    z-index: 10;
+}
+
+/* Close Button Styling */
+.close-grid {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    background: transparent;
+    border: none;
+    font-size: 1rem; /* Smaller size */
+    color: black; /* Dark brown */
+    cursor: pointer;
+    line-height: 1;
+    padding: 5px;
+    z-index: 100;
+}
+
+.close-grid:hover {
+    color: #927f51;
+    /* Highlight color on hover */
+}
+
+.grid-actions {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    height: 50px;
+}
+
+
+
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 120px;
+    left: 50%;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal {
+    background: #f9f9f9;
+    border-radius: 10px;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    width: 500px;
+    max-width: 90%;
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    z-index: 2000;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.modal-header .close-modal {
+    background: transparent;
+    border: none;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.modal-body {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.modal-body .form-field {
+    margin-bottom: 5px;
+}
+
+.modal-body label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.modal-body input {
+    width: 100%;
+    padding: 5px;
+    font-size: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.modal-footer button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-footer .btn-save {
+    background: #28a745;
+    color: white;
+}
+
+.modal-footer .btn-cancel {
+    background: #dc3545;
+    color: white;
+}
+/* Create Button Styling */
+.create-btn {
+    position: absolute;
+    bottom: 50px; /* Adjust spacing from the bottom */
+    right: 15px; /* Adjust spacing from the right */
+    background: #927f51; 
+    color: white; /* White text color */
+    padding: 5px 10px; /* Add padding for better touch area */
+    font-size: 0.75rem; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+    cursor: pointer; /* Pointer cursor */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.create-btn:hover {
+    background: #70613e; 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.create-btn:active {
+    background: #1e7e34; /* Even darker green on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow on click */
+    transform: translateY(0); /* Remove lift effect */
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .grid-container {
+        width: 95%;
+        /* Adjust width for smaller screens */
+        top: 120px;
+    }
+
+    .grid-table th,
+    .grid-table td {
+        padding: 3px;
+        font-size: 0.6rem;
+    }
+
+    .grid-actions button {
+        padding: 2px 3px;
+        font-size: 0.75rem;
+    }
+
+    .create-btn {
+        bottom: 50px; /* Adjust spacing from the bottom */
+        right: 15px; /* Adjust spacing from the right */
+        padding: 5px ; /* Add padding for better touch area */
+        font-size: 0.65rem; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        width: 90%;
+        /* Full width for mobile */
+        top: 120px;
+    }
+
+    .grid-table th,
+    .grid-table td {
+        padding: 2px;
+        font-size: 0.55rem;
+    }
+
+    .grid-actions button {
+        padding: 2px;
+        font-size: 0.7rem;
+    }
+}
+
+.grid-filters {
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.filter-input, .filter-select {
+    font-size: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 40px
+}
+
+.filter-btn {
+    padding: 5px ;
+    font-size: 0.7rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 40px
+}
+
+.filter-btn:hover {
+    background-color: #0056b3;
+}
+
+.clear-btn {
+    padding: 5px ;
+    font-size: 0.7rem;
+    color: white;
+    background-color: #de4812;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 40px
+}
+
+.clear-btn:hover {
+    background-color: #bc3909;
+}
+
+
+/* Responsive Layout: Stack filters vertically on smaller screens */
+@media (max-width: 768px) {
+    .grid-filters {
+        gap: 5px;
+        padding: 5px;
+    }
+
+
+    .filter-input, .filter-select {
+        font-size: 0.65rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        height: 35px
+    }
+
+    .filter-btn, .clear-btn {
+        padding: 3px ;
+        font-size: 0.65rem;
+        height: 35px
+    }
+
+
+    .filter-btn, .clear-btn {
+        text-align: center;
+    }
+
+}
+
+/* Responsive Layout: Stack filters vertically on smaller screens */
+@media (max-width: 480px) {
+    .grid-filters {
+        gap: 3px;
+        padding: 3px;
+    }
+
+
+    .filter-input, .filter-select {
+        font-size: 0.55rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        height: 25px
+    }
+
+    .filter-btn, .clear-btn {
+        padding: 3px ;
+        font-size: 0.55rem;
+        height: 25px
+    }
+
+
+    .filter-btn, .clear-btn {
+        text-align: center;
+    }
+
+}
