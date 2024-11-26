@@ -1,3 +1,25 @@
+const BASE_URL ="http://localhost:8081/wepAppNovara/";  //(host)-(port)-(projectname)
+
+//---------------------------------------------------------------- LOADING SPINNER -----------------------------------------------------------------------
+
+// Global Spinner Utility
+const globalSpinner = document.getElementById('global-spinner');
+
+// Show spinner
+function showSpinner() {
+    if (globalSpinner) {
+        globalSpinner.classList.add('visible');
+    }
+}
+
+// Hide spinner
+function hideSpinner() {
+    if (globalSpinner) {
+        globalSpinner.classList.remove('visible');
+    }
+}
+
+
 //---------------------------------------------------------------- INITIALIZING MAP -----------------------------------------------------------------------
 
 let activeMarker = null; // Declare activeMarker in the global scope
@@ -41,13 +63,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     map.getPane('personsPane').style.zIndex = 200;
 
     // Load data dynamically and add markers with custom panes
-    loadData('http://localhost:8081/wepAppNovara/apis/get-institutions.php', map, 'fa-university', '#708090', 'Institution', 'institutionsPane');
-    loadData('http://localhost:8081/wepAppNovara/apis/get-collections.php', map, 'fa-dove', '#1E90FF', 'Collection', 'collectionsPane');
-    loadData('http://localhost:8081/wepAppNovara/apis/get-documents.php', map, 'fa-book', '#2A9D8F', 'Document', 'documentsPane');
-    loadData('http://localhost:8081/wepAppNovara/apis/get-persons.php', map, 'fa-user', '#264653', 'Person', 'personsPane');
+    loadData(`${BASE_URL}apis/get-institutions.php`, map, 'fa-university', '#708090', 'Institution', 'institutionsPane');
+    loadData(`${BASE_URL}apis/get-collections.php`, map, 'fa-dove', '#1E90FF', 'Collection', 'collectionsPane');
+    loadData(`${BASE_URL}apis/get-documents.php`, map, 'fa-book', '#2A9D8F', 'Document', 'documentsPane');
+    loadData(`${BASE_URL}apis/get-persons.php`, map, 'fa-user', '#264653', 'Person', 'personsPane');
 
     // Load stopover data and populate the left panel and map
-    const stopovers = await fetchData('http://localhost:8081/wepAppNovara/apis/get-stopovers.php');
+    const stopovers = await fetchData(`${BASE_URL}apis/get-stopovers.php`);
     populateLeftPanel(stopovers, map);
 
     // Load default counts
@@ -82,6 +104,7 @@ function createFaIcon(faClass, color, isActive = false) {
 
 //---------------------------------------------------------------- LOADING DATA AND ADDING CUSTOMIZED MARKERS -----------------------------------------------------------------------
 function loadData(apiUrl, map, faClass, color, type, pane) {
+    showSpinner(); // Show spinner when loading starts
     fetch(apiUrl)
         .then(response => {
             if (!response.ok) {
@@ -160,7 +183,8 @@ function loadData(apiUrl, map, faClass, color, type, pane) {
                 }
             });
         })
-        .catch(error => console.error(`Error loading data from ${apiUrl}:`, error));
+        .catch(error => console.error(`Error loading data from ${apiUrl}:`, error))
+        .finally(() => hideSpinner()); // Hide spinner when loading finishes;
 }
 
 // Updated popup generation with direct binding for info panel
@@ -574,8 +598,9 @@ function generateStopoverPopup(stopover) {
 
 // Function to fetch and update counts (e.g., Persons, Documents)
 async function fetchCounts(stopoverName) {
+    showSpinner();
     try {
-        const response = await fetch(`apis/fetch-counts.php?stopover=${encodeURIComponent(stopoverName)}`);
+        const response = await fetch(`${BASE_URL}apis/fetch-counts.php?stopover=${encodeURIComponent(stopoverName)}`);
         if (!response.ok) {
             throw new Error('Failed to fetch counts');
         }
@@ -588,7 +613,11 @@ async function fetchCounts(stopoverName) {
     } catch (error) {
         console.error('Error fetching counts:', error);
     }
+    finally {
+        hideSpinner(); // Hide spinner when loading finishes
+    }
 }
+
 
 // Function to toggle visibility of the left panel
 function toggleLeftPanel(show) {
@@ -628,8 +657,8 @@ document.addEventListener('DOMContentLoaded', () => {
 async function fetchCounts(stopover = '') {
     try {
         const url = stopover
-            ? `http://localhost:8081/wepAppNovara/apis/get-counts.php?stopover=${encodeURIComponent(stopover)}`
-            : 'http://localhost:8081/wepAppNovara/apis/get-total-counts.php';
+            ? `${BASE_URL}apis/get-counts.php?stopover=${encodeURIComponent(stopover)}`
+            : `${BASE_URL}apis/get-total-counts.php`;
 
         const response = await fetch(url);
         if (!response.ok) {
@@ -670,7 +699,7 @@ function showRightPanel(stopoverName) {
     rightPanel.classList.remove('hidden');
 
     // Fetch data from the API
-    fetch(`http://localhost:8081/wepAppNovara/apis/get-all-from-stopover.php?stopover=${encodeURIComponent(stopoverName)}`)
+    fetch(`${BASE_URL}apis/get-all-from-stopover.php?stopover=${encodeURIComponent(stopoverName)}`)
         .then(response => response.json())
         .then(data => {
             panelContent.innerHTML = `
@@ -950,17 +979,17 @@ document.addEventListener('DOMContentLoaded', () => {
     gridContainer.appendChild(paginationControls);
 
     const tableApiMap = {
-        "Persons": "apis/get-persons.php",
-        "Documents": "apis/get-documents.php",
-        "Collections": "apis/get-collections.php",
-        "Institutions": "apis/get-institutions.php",
+        "Persons": `${BASE_URL}apis/get-persons.php`,
+        "Documents": `${BASE_URL}apis/get-documents.php`,
+        "Collections": `${BASE_URL}apis/get-collections.php`,
+        "Institutions": `${BASE_URL}apis/get-institutions.php`,
     };
 
     const createApiMap = {
-        "Persons": "apis/create-person.php",
-        "Documents": "apis/create-document.php",
-        "Collections": "apis/create-collection.php",
-        "Institutions": "apis/create-institution.php",
+        "Persons": `${BASE_URL}apis/create-person.php`,
+        "Documents": `${BASE_URL}apis/create-document.php`,
+        "Collections": `${BASE_URL}apis/create-collection.php`,
+        "Institutions": `${BASE_URL}apis/create-institution.php`,
     };
 
     // Handle create button click
@@ -978,10 +1007,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const deleteApiMap = {
-        "Persons": "apis/delete-person.php",
-        "Documents": "apis/delete-document.php",
-        "Collections": "apis/delete-collection.php",
-        "Institutions": "apis/delete-institution.php",
+        "Persons": `${BASE_URL}apis/delete-person.php`,
+        "Documents": `${BASE_URL}apis/delete-document.php`,
+        "Collections": `${BASE_URL}apis/delete-collection.php`,
+        "Institutions": `${BASE_URL}apis/delete-institution.php`,
     };
 
 
@@ -1021,6 +1050,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function fetchDataForGrid(apiUrl) {
+        
+        // Display "Loading..." text in the gridBody during fetch
+    gridBody.innerHTML = '<p class="loading-message">Loading data...</p>';
         fetch(apiUrl)
             .then((response) => {
                 if (!response.ok) {
@@ -1200,7 +1232,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="modal-footer">
             <button class="btn-save" hidden>Save</button>
-            <button class="btn-create hidden">Create</button>
+            <button class="btn-create" hidden>Create</button>
             <button class="btn-cancel">Cancel</button>
         </div>
     </div>
@@ -1289,82 +1321,84 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Function to open modal for update
-    function handleUpdate(row) {
-        const updateApiMap = {
-            "Persons": "apis/update-person.php",
-            "Documents": "apis/update-document.php",
-            "Collections": "apis/update-collection.php",
-            "Institutions": "apis/update-institution.php",
-        };
+function handleUpdate(row) {
+    const updateApiMap = {
+        "Persons": `${BASE_URL}apis/update-person.php`,
+        "Documents": `${BASE_URL}apis/update-document.php`,
+        "Collections": `${BASE_URL}apis/update-collection.php`,
+        "Institutions": `${BASE_URL}apis/update-institution.php`,
+    };
 
-        const currentCategory = document.querySelector('.bottom-nav-item.active')?.getAttribute('data-category');
-        currentApiUrl = updateApiMap[currentCategory];
+    const currentCategory = document.querySelector('.bottom-nav-item.active')?.getAttribute('data-category');
+    currentApiUrl = updateApiMap[currentCategory];
 
-        if (!currentApiUrl) {
-            alert('Update API not found for this category.');
-            return;
-        }
+    if (!currentApiUrl) {
+        alert('Update API not found for this category.');
+        return;
+    }
 
-        isCreateMode = false; // Not in create mode
-        currentRowData = row;
+    isCreateMode = false; // Set mode to update
+    currentRowData = row;
 
-        // Update modal title and buttons
-        modalOverlay.querySelector('#modal-title').textContent = 'Update Row';
-        saveBtn.classList.remove('hidden');
-        createBtn.classList.add('hidden');
+    // Update modal title and buttons
+    modalOverlay.querySelector('#modal-title').textContent = 'Update Row';
+    saveBtn.hidden = false; // Show Save button
+    createBtn.hidden = true; // Hide Create button
 
-        // Populate the modal form with row data
-        updateForm.innerHTML = '';
-        Object.keys(row).forEach((key) => {
-            const fieldWrapper = document.createElement('div');
-            fieldWrapper.classList.add('form-field');
-            fieldWrapper.innerHTML = `
+    // Populate the modal form with row data
+    updateForm.innerHTML = '';
+    Object.keys(row).forEach((key) => {
+        const fieldWrapper = document.createElement('div');
+        fieldWrapper.classList.add('form-field');
+        fieldWrapper.innerHTML = `
             <label for="${key}">${key.replace(/_/g, ' ')}</label>
             <input type="text" id="${key}" name="${key}" value="${row[key] || ''}">
         `;
-            updateForm.appendChild(fieldWrapper);
-        });
+        updateForm.appendChild(fieldWrapper);
+    });
 
-        // Show the modal
-        modalOverlay.style.display = 'flex';
-    }
+    // Show the modal
+    modalOverlay.style.display = 'flex';
+}
 
-    // Function to open modal for create
-    function openCreateModal(apiUrl, category) {
-        currentApiUrl = apiUrl;
+// Function to open modal for create
+function openCreateModal(apiUrl, category) {
+    currentApiUrl = apiUrl;
 
-        isCreateMode = true; // Enable create mode
-        currentRowData = null;
+    isCreateMode = true; // Set mode to create
+    currentRowData = null;
 
-        // Update modal title and buttons
-        modalOverlay.querySelector('#modal-title').textContent = 'Create New Entry';
-        saveBtn.classList.add('hidden');
-        createBtn.classList.remove('hidden');
+    // Update modal title and buttons
+    modalOverlay.querySelector('#modal-title').textContent = 'Create New Entry';
+    saveBtn.hidden = true; // Hide Save button
+    createBtn.hidden = false; // Show Create button
 
-        // Populate the modal form with empty fields
-        updateForm.innerHTML = '';
-        Object.keys(tableData[0] || {}).forEach((key) => {
-            if (key === 'ID') return; // Exclude ID from the creation form
+    // Populate the modal form with empty fields
+    updateForm.innerHTML = '';
+    Object.keys(tableData[0] || {}).forEach((key) => {
+        if (key === 'ID') return; // Exclude ID from the creation form
 
-            const fieldWrapper = document.createElement('div');
-            fieldWrapper.classList.add('form-field');
-            fieldWrapper.innerHTML = `
+        const fieldWrapper = document.createElement('div');
+        fieldWrapper.classList.add('form-field');
+        fieldWrapper.innerHTML = `
             <label for="${key}">${key.replace(/_/g, ' ')}</label>
             <input type="text" id="${key}" name="${key}">
         `;
-            updateForm.appendChild(fieldWrapper);
-        });
+        updateForm.appendChild(fieldWrapper);
+    });
 
-        // Show the modal
-        modalOverlay.style.display = 'flex';
-    }
+    // Show the modal
+    modalOverlay.style.display = 'flex';
+}
 
-    function closeModal() {
-        modalOverlay.style.display = 'none';
-        updateForm.innerHTML = '';
-        currentRowData = null;
-        currentApiUrl = null;
-    }
+// Function to close the modal
+function closeModal() {
+    modalOverlay.style.display = 'none';
+    updateForm.innerHTML = ''; // Clear form
+    currentRowData = null;
+    currentApiUrl = null;
+}
+
 
     function handleDelete(rowId, rowIndex) {
         const confirmation = confirm('Are you sure you want to delete this row?');
